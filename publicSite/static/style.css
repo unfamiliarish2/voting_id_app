@@ -1,0 +1,16 @@
+.buttons {
+  justify-content: center;
+  display: flex;
+}
+
+.buttons a:last-child {
+  margin-left: 20px;
+}
+
+.jumbotron {
+  padding: 60px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
