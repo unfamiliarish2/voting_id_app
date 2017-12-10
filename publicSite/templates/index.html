@@ -1,34 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <title>Lift Up Democracy</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href='{% static 'style.css' %}' />
-</head>
+{% block head_title %}Lift Up Democracy{% endblock %}
 
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">Lift Up Democracy</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    {% if request.user.email %}
-                        <li><a href="/accounts/logout">{{ request.user.email }}</a></li>
-                    {% else %}
-                        <li><a href="/accounts/login">Login</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+{% block content %}
     <header class="jumbotron">
         <h1>Our rights are under attack</h1>
         <p>
@@ -38,10 +12,8 @@
             Join us in turning the tide, and giving the vote back to the people.
         </p>
         <div class="buttons">
-            <a href="/campgrounds/new" class="btn btn-primary btn-lg">I want to help someone</a>
-            <a href="/campgrounds/new" class="btn btn-primary btn-lg">I want help getting an ID</a>
+            <a href="{% url 'account_signup' %}?type=helpee" class="btn btn-primary btn-lg">I want to help someone</a>
+            <a href="{% url 'account_signup' %}?type=helper" class="btn btn-primary btn-lg">I want help getting an ID</a>
         </div>
     </header>
-</body>
-
-</html>
+{% endblock %}
