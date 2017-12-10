@@ -25,7 +25,12 @@ SECRET_KEY = '0+y-3qg3ji2i0+&(a7(zaya#y(kv00x6uqp(0!ms+j-lihm9f@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['voting-gchwalik.c9users.io', 'localhost']
+ALLOWED_HOSTS = [
+    'voting-gchwalik.c9users.io',
+    'localhost',
+    'liftupdemocracy.trappdesign.net',
+    'lift-up-democracy.herokuapp.com',
+]
 
 
 # Application definition
