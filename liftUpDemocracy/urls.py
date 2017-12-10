@@ -24,5 +24,14 @@ urlpatterns = [
 
     url(r'^helper$', views.getHelperForm, name="getHelperForm"),
     url(r'^helper_post$', views.submitHelperInfo, name="submitHelperInfo"),
+
+    url(r'^helpee$', views.getHelpeeForm, name="getHelpeeForm"),
+    url(r'^helpee_post$', views.submitHelpeeInfo, name="submitHelpeeInfo"),
+
+    url(r'^location$', views.getLocationForm, name="getLocationForm"),
+    url(r'^location_post', views.submitLocationInfo, name="submitLocationInfo"),
+
     url(r'^demographics$', views.getDemographicForm, name="getDemographicForm"),
+    url(r'^demographics_post$', views.submitDemographicInfo, name="submitDemographicInfo"),
+
 ]

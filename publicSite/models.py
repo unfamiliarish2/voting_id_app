@@ -14,6 +14,7 @@ class Helper(models.Model):
 
     travel = models.BooleanField()
     money = models.BooleanField()
+    amount_available = models.IntegerField()
 
     def email(self):
         return self.user.email
@@ -44,6 +45,7 @@ class Helpee(models.Model):
 
     travel = models.BooleanField()
     money = models.BooleanField()
+    amount_needed = models.IntegerField()
 
     def email(self):
         return self.user.email
