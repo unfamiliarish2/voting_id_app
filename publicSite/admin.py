@@ -7,10 +7,10 @@ from publicSite.models import Helper, Helpee, Demographic
 # Register your models here.
 
 class HelperAdmin(admin.ModelAdmin):
-    fields = ['user', 'state', 'city', 'info', 'travel', 'money']
+    fields = ['user', 'state', 'city', 'travel', 'money']
 
 class HelpeeAdmin(admin.ModelAdmin):
-    fields = ['user', 'state', 'city', 'travel', 'money']
+    fields = ['user', 'state', 'city', 'info', 'travel', 'money']
 
 class DemographicAdmin(admin.ModelAdmin):
     fields = ['user', 'age_category', 'gender', 'ethnicity']

@@ -21,4 +21,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^accounts/', include('allauth.urls')),
+
+    url(r'^helper$', views.getHelperForm, name="getHelperForm"),
+    url(r'^helper_post$', views.submitHelperInfo, name="submitHelperInfo"),
+    url(r'^demographics$', views.getDemographicForm, name="getDemographicForm"),
 ]

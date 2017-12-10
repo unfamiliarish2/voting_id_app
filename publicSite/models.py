@@ -12,13 +12,13 @@ class Helper(models.Model):
     state = models.CharField(max_length=20)
     city = models.CharField(max_length=60)
 
-    info = models.BooleanField()
     travel = models.BooleanField()
     money = models.BooleanField()
 
 class Helpee(models.Model):
     user = models.OneToOneField(User, related_name='helpee')
 
+    info = models.BooleanField()
     state = models.CharField(max_length=20)
     city = models.CharField(max_length=60)
 

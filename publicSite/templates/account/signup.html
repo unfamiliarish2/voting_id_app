@@ -18,7 +18,7 @@
     <span class="span-or">or</span>
   </div>
 
-  <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  <form id="signup_form" method="post" action="{% url 'account_signup' %}">
     <div class="form-group">
       {{ form.email.errors }}
       <label for="id_email">Email</label>

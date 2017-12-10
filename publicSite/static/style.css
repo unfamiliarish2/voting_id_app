@@ -18,6 +18,7 @@
 .signup {
   max-width: 320px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .facebook {
@@ -63,4 +64,14 @@
   text-align: center;
   font-size: 18px;
   margin: 10px 0;
+}
+
+
+.question {
+  margin: 15px 0; 
+  margin-left: 10px;
+}
+
+.form-check-label {
+  font-weight: normal;
 }
