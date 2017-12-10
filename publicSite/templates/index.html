@@ -5,22 +5,21 @@
 {% block head_title %}Lift Up Democracy{% endblock %}
 
 {% block content %}
-    <header class="jumbotron">
+    <header class="jumbotron text-center">
         <img src='{% static 'logo.png' %}' width='369px' />
         <h2>Let’s turn the tide and give the vote back to the people.</h2>
-        <h3>The problem:</h3>
-        <p>
-            Across the country, Voter ID laws are being passed that impose requirements that are both cost and time prohibitive for a significant portion of the electorate.
-        </p>
-        <h3>Our mission:</h3>
-        <p>
-            To simplify the sometimes prohibitive process of getting voter IDs nationwide, ensuring that all eligible voters can participate in making our democracy stronger.
-        </p>
-
         <h4 class="text-center ready-to-get">Ready to get involved?</h4>
         <div class="buttons">
             <a href="{% url 'account_signup' %}?type=helper" class="btn btn-primary btn-lg">I want to help someone</a>
             <a href="{% url 'account_signup' %}?type=helpee" class="btn btn-primary btn-lg">I want help getting an ID</a>
         </div>
     </header>
+    <div class="container goal-and-mission">
+        <p>
+            <strong>Our mission</strong> is to reduce the number of eligible voters turned away from the polls, due to lacking needed voting identification
+        </p>
+        <p>
+            <strong>Our goal</strong> is to connect those without access to identification with organizations and individuals that can provide transportation, information, and financial assistance.
+        </p>
+    </div>
 {% endblock %}

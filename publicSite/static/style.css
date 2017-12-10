@@ -77,7 +77,12 @@
 }
 
 .full-width {
-  width: 320px;
+  max-width: 320px;
+}
+
+.goal-and-mission {
+  max-width: 500px;
+  margin-bottom: 30px;
 }
 
 .ready-to-get {
