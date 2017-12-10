@@ -68,7 +68,7 @@
 
 
 .question {
-  margin: 15px 0; 
+  margin: 15px 0;
   margin-left: 10px;
 }
 
@@ -78,4 +78,8 @@
 
 .full-width {
   width: 320px;
+}
+
+.ready-to-get {
+  margin-top: 45px;
 }
