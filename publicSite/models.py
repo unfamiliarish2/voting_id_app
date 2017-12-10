@@ -59,6 +59,7 @@ class Helpee(models.Model):
     travel = models.BooleanField()
     money = models.BooleanField()
     amount_needed = models.IntegerField()
+    travel_cost = models.IntegerField()
 
     def email(self):
         return self.user.email

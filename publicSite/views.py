@@ -31,9 +31,11 @@ def submitHelperInfo(request):
     
     helper.money = 'money' in selections 
     helper.travel = 'travel' in selections
+    helper.amount_available = request.POST.get('amount', 0)
+
     helper.save()
 
-    return HttpResponseRedirect(reverse('getDemographicForm'))
+    return HttpResponseRedirect(reverse('getLocationForm'))
 
   
   
@@ -56,10 +58,12 @@ def submitHelpeeInfo(request):
     helpee.info = 'info' in selections
     helpee.money = 'money' in selections 
     helpee.travel = 'travel' in selections
+    helpee.amount_needed = request.POST.get('amount', None)
+    helpee.travel_cost = request.POST.get('travel_cost', None)
+
     helpee.save()
 
-    return HttpResponseRedirect(reverse('getDemographicForm'))
-
+    return HttpResponseRedirect(reverse('getLocationForm'))
 
 
 
@@ -69,8 +73,24 @@ def getLocationForm(request):
     
 #CREATE - add new campground to database
 def submitLocationInfo(request):
-    return
+    
+    user = request.user
+    
+    try:
+        person = user.helper
+    except:
+        person = user.helpee
+    
+    person.state = request.POST.get('state', None)
+    person.city = request.POST.get('city', None)
+    person.save()
+    
+    return HttpResponseRedirect(reverse('thankYou'))
 
+
+#THANK YOU Page
+def thankYou(request):
+    return render(request, 'thankYou.html')    
 
 
 #NEW - show form to create new demographic info

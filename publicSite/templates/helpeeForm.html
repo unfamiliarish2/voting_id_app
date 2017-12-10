@@ -31,14 +31,29 @@
                 A Lyft or Uber ride to get to in-person applications
               </label>
             </div>
-
+            </br>
             <div class="form-check">
               <label class="form-check-label">
                 If you selected that you need money help, how much do you need?</br>
-                <input class="form-check-input full-width" type="text" value="amount" name="checks[]">
+                <input class="form-check-input" type="text" name="amount">
+              </label>
+            </div>
+</br>
+            <div class="form-check">
+              <label class="form-check-label">
+                If you selected that you need a ride, how much will it cost?</br>
+                Use one of the fare calculators below.<br>
+                <input class="form-check-input" type="text" name="travel_cost">
+
+                <h6 class="text-center">
+                  <a target="_blank" href="https://estimatefares.com/">Lyft Calculator</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://www.uber.com/fare-estimate/">Uber Calculator</a>
+                </h6>
               </label>
             </div>
 
+
+            
         </div>
 
         {% csrf_token %}

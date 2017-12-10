@@ -39,6 +39,8 @@ urlpatterns = [
 
     url(r'^location$', views.getLocationForm, name="getLocationForm"),
     url(r'^location_post', views.submitLocationInfo, name="submitLocationInfo"),
+    
+    url(r'^thank_you', views.thankYou, name="thankYou"),
 
     url(r'^demographics$', views.getDemographicForm, name="getDemographicForm"),
     url(r'^demographics_post$', views.submitDemographicInfo, name="submitDemographicInfo"),
