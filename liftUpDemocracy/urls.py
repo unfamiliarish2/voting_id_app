@@ -17,6 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from publicSite import views
 
+# Text to put at the end of each page's <title>.
+admin.site.site_title = 'Lift Up Democracy'
+
+# Text to put in each page's <h1> (and above login form).
+admin.site.site_header = admin.site.site_title + ' Admin'
+
+# Text to put at the top of the admin index page.
+admin.site.index_title = admin.site.site_header
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),

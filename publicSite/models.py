@@ -25,16 +25,29 @@ class Helper(models.Model):
         return self.city + ', ' + self.state
     location.boolean = False
     location.short_description = 'Location'
+    location.admin_order_field = 'city'
 
-    def availability(self):
-        available = []
-        if self.travel:
-            available.append('travel')
-        if self.money:
-            available.append('money')
-        return ', '.join(available)
-    availability.boolean = False
-    availability.short_description = 'Availability'
+    def amount_available_display(self):
+        return '$%d' % self.amount_available
+    amount_available_display.short_description = 'Can provide'
+    amount_available_display.admin_order_field = 'amount_available'
+
+    def money_display(self):
+        return self.money
+    money_display.short_description = 'Willing to give ($)'
+    money_display.admin_order_field = 'money'
+    money_display.boolean = True
+
+    def travel_display(self):
+        return self.travel
+    travel_display.short_description = 'Willing to drive (🚘)'
+    travel_display.admin_order_field = 'travel'
+    travel_display.boolean = True
+
+    def has_match(self):
+        return len(self.match_set.all()) != 0
+    has_match.short_description = 'Has been matched?'
+    has_match.boolean = True
 
 class Helpee(models.Model):
     user = models.OneToOneField(User, related_name='helpee')
@@ -51,23 +64,41 @@ class Helpee(models.Model):
         return self.user.email
     email.boolean = False
     email.short_description = 'Email'
+    email.admin_order_field = 'user'
 
     def location(self):
         return self.city + ', ' + self.state
     location.boolean = False
     location.short_description = 'Location'
+    location.admin_order_field = 'city'
 
-    def needs(self):
-        needs = []
-        if self.info:
-            needs.append('info')
-        if self.travel:
-            needs.append('travel')
-        if self.money:
-            needs.append('money')
-        return ', '.join(needs)
-    needs.boolean = False
-    needs.short_description = 'Needs'
+    def money_display(self):
+        return self.money
+    money_display.short_description = 'Needs money?'
+    money_display.admin_order_field = 'money'
+    money_display.boolean = True
+
+    def amount_needed_display(self):
+        return '$%d' % self.amount_needed
+    amount_needed_display.short_description = 'Needs'
+    amount_needed_display.admin_order_field = 'amount_needed'
+
+    def travel_display(self):
+        return self.travel
+    travel_display.short_description = 'Needs transportation?'
+    travel_display.admin_order_field = 'travel'
+    travel_display.boolean = True
+
+    def info_display(self):
+        return self.info
+    info_display.short_description = 'Has questions?'
+    info_display.admin_order_field = 'info'
+    info_display.boolean = True
+
+    def has_match(self):
+        return len(self.match_set.all()) != 0
+    has_match.short_description = 'Has been matched?'
+    has_match.boolean = True
 
 class Demographic(models.Model):
     user = models.OneToOneField(User, related_name="demographics")
@@ -77,19 +108,19 @@ class Demographic(models.Model):
     ethnicity = models.CharField(max_length=255)
 
 class Match(models.Model):
-    helper = models.ForeignKey(User, on_delete=models.CASCADE, related_name='%(class)s_helper')
-    helpee = models.ForeignKey(User, on_delete=models.CASCADE, related_name='%(class)s_helpee')
+    helper = models.ForeignKey(Helper, on_delete=models.CASCADE)
+    helpee = models.ForeignKey(Helpee, on_delete=models.CASCADE)
 
     match_type = models.CharField(max_length=1, choices=(('t', 'travel'), ('m', 'money')))
     estimated_dollars = models.IntegerField()
 
     def helper_email(self):
-        return self.helper.email
+        return self.helper.user.email
     helper_email.boolean = False
     helper_email.short_description = 'Helper Email'
 
     def helpee_email(self):
-        return self.helpee.email
+        return self.helpee.user.email
     helpee_email.boolean = False
     helpee_email.short_description = 'Helpee Email'
 
