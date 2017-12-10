@@ -25,7 +25,7 @@ SECRET_KEY = '0+y-3qg3ji2i0+&(a7(zaya#y(kv00x6uqp(0!ms+j-lihm9f@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['voting-gchwalik.c9users.io']
 
 
 # Application definition
