@@ -10,8 +10,13 @@
         <h2>Let’s turn the tide and give the vote back to the people.</h2>
         <h4 class="text-center ready-to-get">Ready to get involved?</h4>
         <div class="buttons">
-            <a href="{% url 'account_signup' %}?type=helper" class="btn btn-primary btn-lg">I want to help someone</a>
-            <a href="{% url 'account_signup' %}?type=helpee" class="btn btn-primary btn-lg">I want help getting an ID</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'account_signup' %}?type=helper" class="btn btn-primary btn-lg">I want to help someone</a>
+                <a href="{% url 'account_signup' %}?type=helpee" class="btn btn-primary btn-lg">I want help getting an ID</a>
+            {% else %}
+                <a href="{% url 'getHelperForm' %}" class="btn btn-primary btn-lg">I want to help someone</a>
+                <a href="{% url 'getHelpeeForm' %}" class="btn btn-primary btn-lg">I want help getting an ID</a>
+            {% endif %}
         </div>
     </header>
     <div class="container goal-and-mission">
@@ -22,17 +27,17 @@
         <p>
             <strong>Our goal</strong> is to connect those without access to identification with organizations and individuals that can provide transportation, information, and financial assistance.
         </p>
-        
+
         <h3>Why sign up?</h3>
         <p>
             Sign up with Lift Up Democracy if
             <ul>
                 <li>you have questions or need help getting your voting IDs</li>
                 <li>you want to help others get access to voting IDs</li>
-            </ul> 
-            After you've signed up, we'll match you with someone to help get voting IDs. 
+            </ul>
+            After you've signed up, we'll match you with someone to help get voting IDs.
         </p>
-        
+
         <h3>What's next?</h3>
         <p>
             We'll send an anonymized email with details to both you and your match, after which you can start communicating directly.
@@ -40,12 +45,12 @@
         <p>
             Examples of help include: paying for processing fees, transportation to and from in-person appointments, etc.
         </p>
-        
+
         <h3>What are the ID requirements?</h3>
         <p>
             <a href="https://www.voteriders.org/get-voter-id/">Click here for more information about the voting ID requirements in your state</a>
         </p>
-        
+
         <h3>Questions or concerns?</h3>
         <p>
             Please reach out to us at <a href="mailto:me@example.com">admin@liftupdemocracy.org</a>.
