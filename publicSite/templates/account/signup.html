@@ -38,11 +38,11 @@
     </div>
 
     {% csrf_token %}
-<!--     {% if request.GET.q == "?type='helper'" %}
+    {% if request.GET.type == 'helper' %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{% url 'getHelperForm' %}" />
     {% else %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %} -->
+      <input type="hidden" name="{{ redirect_field_name }}" value="{% url 'getHelpeeForm' %}" />
+    {% endif %}
 
     <button type="submit" class="btn btn-lg btn-block btn-primary">
       Sign Up
