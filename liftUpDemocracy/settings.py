@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'voting-gchwalik.c9users.io',
     'localhost',
     'liftupdemocracy.org',
+    'www.liftupdemocracy.org',
     'lift-up-democracy.herokuapp.com',
 ]
 
@@ -150,6 +151,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_USER_DISPLAY = lambda user: user.email
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`

@@ -6,16 +6,16 @@
 
 {% block content %}
     <header class="jumbotron text-center">
-        <img src='{% static 'logo.png' %}' width='369px' />
+        <img src='{% static 'logo.png' %}' class='logo' />
         <h2>Let’s turn the tide and give the vote back to the people.</h2>
         <h4 class="text-center ready-to-get">Ready to get involved?</h4>
-        <div class="buttons">
+        <div class="buttons row justify-content-center">
             {% if user.is_authenticated %}
-                <a href="{% url 'getHelperForm' %}" class="btn btn-primary btn-lg">I want to help someone</a>
-                <a href="{% url 'getHelpeeForm' %}" class="btn btn-primary btn-lg">I want help getting an ID</a>
+                <a href="{% url 'getHelperForm' %}" class="btn btn-primary btn-lg col4-sm">I want to help someone</a>
+                <a href="{% url 'getHelpeeForm' %}" class="btn btn-primary btn-lg col4-sm">I want help getting an ID</a>
             {% else %}
-                <a href="{% url 'account_signup' %}?type=helper" class="btn btn-primary btn-lg">I want to help someone</a>
-                <a href="{% url 'account_signup' %}?type=helpee" class="btn btn-primary btn-lg">I want help getting an ID</a>
+                <a href="{% url 'account_signup' %}?type=helper" class="btn btn-primary btn-lg col4-sm">I want to help someone</a>
+                <a href="{% url 'account_signup' %}?type=helpee" class="btn btn-primary btn-lg col4-sm">I want help getting an ID</a>
             {% endif %}
         </div>
     </header>

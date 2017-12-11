@@ -1,14 +1,51 @@
-.buttons {
-  justify-content: center;
-  display: flex;
+.body {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.buttons a:last-child {
-  margin-left: 20px;
+.bg-faded {
+  background-color: #d6e8f2;
+  border-bottom: 1px solid #c1dceb;
+}
+
+.btn-primary {
+  background-color: #4692bc;
+  border-color: #4692bc;
+}
+
+.btn-primary:hover {
+  background-color: #3d82a8;
+  border-color: #3d82a8;
+}
+
+a {
+  color: #4692bc;
+}
+
+a:hover {
+  color: #3d82a8;
+}
+
+.alert {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.buttons .btn {
+  margin: 5px;
 }
 
 .jumbotron {
   padding: 60px;
+  background-color: #c1dceb;
+  border-radius: 0;
 }
 
 .navbar {
@@ -16,9 +53,15 @@
 }
 
 .signup {
+  width: 90vw;
   max-width: 320px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: calc(25vh - 40px);
+}
+
+.logo {
+  max-width: 369px;
+  width: 100%;
 }
 
 .facebook {
@@ -66,6 +109,10 @@
   margin: 10px 0;
 }
 
+.socialaccount_provider {
+  margin-bottom: 10px;
+}
+
 
 .question {
   margin: 15px 0;
@@ -76,13 +123,17 @@
   font-weight: normal;
 }
 
+.ready-to-get {
+  margin-top: 45px;
+  font-size: 18px;
+}
+
 .full-width {
   max-width: 320px;
 }
 
 .goal-and-mission {
   max-width: 550px;
-  margin-bottom: 30px;
 }
 
 .ready-to-get {
