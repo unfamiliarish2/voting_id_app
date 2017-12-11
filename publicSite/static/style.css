@@ -124,8 +124,10 @@ h2 {
 }
 
 .ready-to-get {
-  margin-top: 45px;
   font-size: 18px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 45px;
 }
 
 .full-width {
