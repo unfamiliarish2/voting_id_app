@@ -90,6 +90,11 @@ class Helpee(models.Model):
     travel_display.admin_order_field = 'travel'
     travel_display.boolean = True
 
+    def travel_cost_display(self):
+        return '$%d' % self.travel_cost
+    travel_cost_display.short_description = 'Needs'
+    travel_cost_display.admin_order_field = 'travel_cost'
+
     def info_display(self):
         return self.info
     info_display.short_description = 'Has questions?'

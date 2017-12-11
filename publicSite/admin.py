@@ -9,8 +9,8 @@ class HelperAdmin(admin.ModelAdmin):
     list_display = ['email', 'location', 'travel_display', 'money_display', 'amount_available_display', 'has_match']
 
 class HelpeeAdmin(admin.ModelAdmin):
-    fields = ['user', 'state', 'city', 'info', 'travel', 'money', 'amount_needed']
-    list_display = ['email', 'location', 'info_display', 'travel_display', 'money_display', 'amount_needed_display', 'has_match']
+    fields = ['user', 'state', 'city', 'info', 'travel', 'travel_cost', 'money', 'amount_needed']
+    list_display = ['email', 'location', 'info_display', 'travel_display', 'travel_cost_display', 'money_display', 'amount_needed_display', 'has_match']
 
 class DemographicAdmin(admin.ModelAdmin):
     fields = ['user', 'age_category', 'gender', 'ethnicity']
