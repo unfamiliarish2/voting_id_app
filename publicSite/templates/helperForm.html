@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block head_title %}Lift Up Democracy{% endblock %}
+
+{% block content %}
+
+<div class="signup">
+
+    <form class="helper" id="helper_form" method="post" action="{% url 'submitHelperInfo' %}">
+
+        <h2 class="text-center">What kind of help can you provide?</h2>
+
+        <div class="question">
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="money" name="checks[]"> Money for others to pay their processing fees
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="travel" name="checks[]"> A Lyft or Uber ride for in-person applications
+                </label>
+            </div>
+
+            </br>
+            <div class="form-group">
+                <label for="amount">
+                    If you selected that you can give money, how much can you give?
+                </label>
+                <input type="number" min="0" step="1" name="amount" class="form-control" required placeholder="0" id="amount" />
+            </div>
+        </div>
+
+        {% csrf_token %}
+        <br/>
+        <button type="submit" class="btn btn btn-block btn-primary">
+            Next
+        </button>
+    </form>
+
+</div>
+
+{% endblock %}

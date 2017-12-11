@@ -1,0 +1,143 @@
+.body {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.bg-faded {
+  background-color: #d6e8f2;
+  border-bottom: 1px solid #c1dceb;
+}
+
+.btn-primary {
+  background-color: #4692bc;
+  border-color: #4692bc;
+}
+
+.btn-primary:hover {
+  background-color: #3d82a8;
+  border-color: #3d82a8;
+}
+
+a {
+  color: #4692bc;
+}
+
+a:hover {
+  color: #3d82a8;
+}
+
+.alert {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.buttons .btn {
+  margin: 5px;
+}
+
+.jumbotron {
+  padding: 60px;
+  background-color: #c1dceb;
+  border-radius: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.signup {
+  width: 90vw;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: calc(25vh - 40px);
+}
+
+.logo {
+  max-width: 369px;
+  width: 100%;
+}
+
+.facebook {
+  background-color: #3B5998;
+  border-color: #3B5998;
+}
+
+.google {
+  background-color: #db3236;
+  border-color: #db3236;
+}
+
+.login-or {
+  position: relative;
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+
+.hr-or {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.social {
+  color: #aaa;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.socialaccount_provider {
+  margin-bottom: 10px;
+}
+
+
+.question {
+  margin: 15px 0;
+  margin-left: 10px;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+
+.ready-to-get {
+  font-size: 18px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.full-width {
+  max-width: 320px;
+}
+
+.goal-and-mission {
+  max-width: 550px;
+}
+
+.ready-to-get {
+  margin-top: 45px;
+}
