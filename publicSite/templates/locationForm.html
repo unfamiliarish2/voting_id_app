@@ -11,29 +11,27 @@
         <h2 class="text-center">Where are you located?</h2>
 
         <div class="question">
-           <div class="form-check">
-              <label class="form-check-label">
-                What is your state?</br>
-                <input class="form-check-input" type="text" name="state">
-              </label>
+            <div class="form-group">
+                <label for="city">
+                    What is your city?
+                </label>
+                <input type="text" name="city" class="form-control" required id="city" />
             </div>
-            
-            <div class="form-check">
-              <label class="form-check-label">
-                What is your city?</br>
-                <input class="form-check-input" type="text" name="city">
-              </label>
+            <div class="form-group">
+                <label for="state">
+                    What is your state?
+                </label>
+                <input type="text" name="state" class="form-control" required id="state" />
             </div>
         </div>
-    
+
         {% csrf_token %}
-        
+        <br/>
         <button type="submit" class="btn btn btn-block btn-primary">
-          Next
+            Next
         </button>
     </form>
-  
+
 </div>
 
-   
 {% endblock %}
