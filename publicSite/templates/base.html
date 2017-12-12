@@ -11,7 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <link rel="stylesheet" href='{% static 'style.css' %}' />
-    <meta name="viewport" content="width=device-width, initial-scale=1"> {% block extra_head %} {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta data for social -->
+    <meta property="og:title" content="Lift Up Democracy" />
+    <meta property="og:description" content="Let’s turn the tide and give the vote back to the people by connecting voters without access to eligible identification with organizations and individuals that can provide transportation, information, and financial assistance." />
+    <meta property="og:image" content="https://liftupdemocracy.org/static/social-image.png" />
+    <meta property="og:url" content="https://liftupdemocracy.org/" />
+    <meta property="fb:app_id" content="1536278076466403" />
+
+    {% block extra_head %} {% endblock %}
 </head>
 
 <body>
