@@ -12,7 +12,7 @@
             {% if not user.is_authenticated %}
                 <h4 class="text-center ready-to-get">Ready to get involved?</h4>
                 <div class="buttons row justify-content-center">
-                    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg col4-sm">Join Us</a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg col4-sm join-us">Join Us</a>
                 </div>
             {% else %}
                 <h4 class="text-center ready-to-get">
@@ -76,7 +76,7 @@
 
         <h3>Questions or concerns?</h3>
         <p>
-            Please reach out to us at <a href="mailto:me@example.com">admin@liftupdemocracy.org</a>.
+            Please reach out to us at <a href="mailto:admin@liftupdemocracy.org">admin@liftupdemocracy.org</a>.
         </p>
     </div>
 {% endblock %}
